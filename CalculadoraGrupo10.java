@@ -6,6 +6,12 @@ Clase calculadora grupo 10
 
 ******************************************************************/
 
-public class CalculadoraGrupo10 {
+public class CalculadoraGrupo10 implements Calculator {
+
+    @Override
+    public double calculate(String operation) {
+        // TODO Auto-generated method stub
+        return 0;
+    }
     
 }
