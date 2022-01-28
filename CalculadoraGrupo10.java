@@ -6,6 +6,6 @@ Clase calculadora grupo 10
 
 ******************************************************************/
 
-public class CalculadoraGrupo10 {
+public class CalculadoraGrupo10 implements Calculator {
     
 }

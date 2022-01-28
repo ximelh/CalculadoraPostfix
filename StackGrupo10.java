@@ -6,6 +6,6 @@ Clase stack grupo 10
 
 ******************************************************************/
 
-public class StackGrupo1 {
+public class StackGrupo10<E> implements Stack<E> {
     
 }
