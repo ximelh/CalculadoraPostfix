@@ -6,22 +6,31 @@ Clase main grupo 10
 
 ******************************************************************/
 import java.io.File;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MainGrupo10 {
     public static void main(String[] args){
+    	ArrayList<String> operaciones = new ArrayList<String>();
+        CalculadoraGrupo10 calculadora = new CalculadoraGrupo10();
         try{
             File file = new File("datos.txt");
             Scanner s = new Scanner(file);
-            CalculadoraGrupo10 calculadora = new CalculadoraGrupo10();
             while (s.hasNextLine()){
-                String linea = s.nextLine();
-                double resultado = calculadora.calculate(linea);
-                System.out.println("El resultado de "+ linea+ " es "+resultado);
+                operaciones.add(s.nextLine());
             }
             s.close();
         } catch (Exception e){
             System.out.println("Error: archivo no encontrado");
+        }
+        
+        for (String a:operaciones) {
+        	try {
+        		double resultado = calculadora.calculate(a);
+        		System.out.println("El resultado de "+ a+ " es "+resultado);
+        	} catch (Exception e) {
+        		System.out.println("Operacion "+ a+ " invalida, faltan numeros");
+        	}
         }
         
     }
