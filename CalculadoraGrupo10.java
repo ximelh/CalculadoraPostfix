@@ -22,21 +22,29 @@ public class CalculadoraGrupo10 implements Calculator {
 
             } catch (Exception e){  //si es caracter + - * /
                 if (caracter.equalsIgnoreCase("+")){ //sumar
-                    double num1 = stack.remove();
-                    double num2 = stack.remove();
-                    stack.add(num1+num2);
+                	
+                		double num1 = stack.remove();
+                		double num2 = stack.remove();
+                		stack.add(num1+num2);
+                
                 } else if (caracter.equalsIgnoreCase("-")){ // restar
-                    double num1 = stack.remove();
-                    double num2 = stack.remove();
-                    stack.add(num2-num1);
+                	
+                		double num1 = stack.remove();
+                		double num2 = stack.remove();
+                		stack.add(num2-num1);
+                	
                 } else if (caracter.equalsIgnoreCase("/")){ //dividir
-                    double num1 = stack.remove();
-                    double num2 = stack.remove();
-                    stack.add(num2/num1);
+                	
+                		double num1 = stack.remove();
+                		double num2 = stack.remove();
+                		stack.add(num2/num1);
+                	
                 } else if (caracter.equalsIgnoreCase("*")){ // multiplicar
-                    double num1 = stack.remove();
-                    double num2 = stack.remove();
-                    stack.add(num2*num1);
+                	
+                		double num1 = stack.remove();
+                		double num2 = stack.remove();
+                		stack.add(num2*num1);
+                	
                 }
             }
         }
