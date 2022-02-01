@@ -13,11 +13,17 @@ class CalculadoraGrupo10Test {
 	
 	/**
 	 * Evalua el metodo de calculate
+	 * @throws Exception 
 	 */
 	@Test
-	void testCalculate() {
+	void testCalculate() throws Exception {
 		CalculadoraGrupo10 calculadora = new CalculadoraGrupo10();
-		assertEquals(15,calculadora.calculate("1 2 + 4 * 3 +"),0.001,"Error en Calculate");
+		try {
+			assertEquals(15,calculadora.calculate("1 2 + 4 * 3 +"),0.001,"Error en Calculate");
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		assertEquals(30,calculadora.calculate("6 2 3 + *"),0.001,"Error en Calculate");
 		assertEquals(11,calculadora.calculate("10 3 5 + - 2 + 3 * 4 5 - +"),0.001,"Error en Calculate");
 	}
