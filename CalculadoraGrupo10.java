@@ -50,6 +50,8 @@ public class CalculadoraGrupo10 implements Calculator{
                 		stack.add(num2*num1);
                 		res = num2*num1;
                 	
+                } else {
+                	throw e;
                 }
             }
         }
