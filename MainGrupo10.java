@@ -11,9 +11,10 @@ import java.util.Scanner;
 
 public class MainGrupo10 {
     public static void main(String[] args){
+    	
     	ArrayList<String> operaciones = new ArrayList<String>();
         CalculadoraGrupo10 calculadora = new CalculadoraGrupo10();
-        try{
+        try{ //leer el archivo
             File file = new File("datos.txt");
             Scanner s = new Scanner(file);
             while (s.hasNextLine()){
@@ -24,12 +25,12 @@ public class MainGrupo10 {
             System.out.println("Error: archivo no encontrado");
         }
         
-        for (String a:operaciones) {
+        for (String a:operaciones) { // calcular para cada linea
         	try {
         		double resultado = calculadora.calculate(a);
         		System.out.println("El resultado de "+ a+ " es "+resultado);
         	} catch (Exception e) {
-        		System.out.println("Operacion "+ a+ " invalida, faltan numeros");
+        		System.out.println("Operacion "+ a+ " invalida");
         	}
         }
         
